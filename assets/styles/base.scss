@@ -1,0 +1,83 @@
+html,
+body {
+    overscroll-behavior-x: none;
+    -webkit-tap-highlight-color: transparent; /* for removing the highlight on Android */
+    overflow-x: hidden;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    display: flex;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    font-family: "Rubik", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif";
+    line-height: 1.4;
+}
+#__next {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+*:not(input):not(textarea) {
+    // Prevent text selection
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    // Hide scroll bar
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+#slide-menu {
+    .MuiDrawer-paper {
+        width: 80%;
+        max-width: 32rem;
+        background-color: #353353;
+    }
+}
+.button {
+    cursor: pointer;
+    &:active {
+        opacity: 0.8;
+    }
+}
+a {
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--main-color);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+    cursor: pointer;
+}
+b {
+    font-weight: 500;
+}
+.MuiButton-root {
+    &.btn-radius {
+        border-radius: 30px !important;
+    }
+    &.btn-radius:hover {
+        color: white;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+textarea {
+    resize: vertical;
+    min-height: 8rem;
+}

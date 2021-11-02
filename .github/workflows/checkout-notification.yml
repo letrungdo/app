@@ -1,0 +1,27 @@
+name: checkout-notification
+on:
+  schedule:
+  # 17GMT+7 → 10UTC
+    - cron: '00 10 * * 1-5'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        run: |
+          curl --request POST 'https://onesignal.com/api/v1/notifications' \
+          --header 'Authorization: Bearer ${{ secrets.ONE_SIGNAL_REST_API_KEY }}' \
+          --header 'Content-Type: application/json' \
+          --data-raw '{
+              "app_id": "d790617f-3ae7-4fa0-b27d-2409909ab696",
+              "headings": {
+                  "en": "Đến giờ checkout rồi mn ơi 😍"
+              },
+              "contents": {
+                  "en": "Hãy nhấp vào em 😘"
+              },
+              "url": "https://app.letrungdo.com/gmo-checkin",
+              "included_segments":["Active Users"]
+          }'
