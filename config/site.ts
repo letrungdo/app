@@ -50,12 +50,12 @@ const config = {
         },
         {
             label: "Facebook",
-            url: "https://www.facebook.com/DoMemory/",
+            url: "https://www.facebook.com/DoRenew",
             iconClassName: "fab facebook-f",
         },
         {
             label: "Linkedin",
-            url: "https://www.linkedin.com/in/letrungdo/",
+            url: "https://www.linkedin.com/in/letrungdo",
             iconClassName: "fab linkedin-in",
         },
     ],
@@ -68,12 +68,12 @@ const config = {
         },
         {
             label: "Facebook",
-            url: "https://www.facebook.com/DoMemory/",
+            url: "https://www.facebook.com/DoRenew",
             iconClassName: "fab facebook-f",
         },
         {
             label: "Linkedin",
-            url: "https://www.linkedin.com/in/letrungdo/",
+            url: "https://www.linkedin.com/in/letrungdo",
             iconClassName: "fab linkedin-in",
         },
         {
