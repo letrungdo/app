@@ -95,7 +95,7 @@ const config = {
         { label: "Privacy Policy", url: "/privacy" },
         { label: "Sitemap", url: "https://app.letrungdo.com/sitemap.xml" },
     ],
-    copyright: "Copyright © 2021 Le Trung Do. Unless otherwise noted, all code MIT license.",
+    copyright: "Copyright © 2022 Le Trung Do. Unless otherwise noted, all code MIT license.",
 };
 
 // Validate
