@@ -6,7 +6,7 @@ const getAuthenCookie = async (req: NextApiRequest, res: NextApiResponse) => {
 
     switch (method) {
         case "POST":
-            const result = await fetch("https://checkin.runsystem.info/auth/login", {
+            const result = await fetch("https://checkin.runsystem.work/auth/login", {
                 method: "POST",
                 redirect: "manual",
                 headers: {

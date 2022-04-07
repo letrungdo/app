@@ -5,7 +5,7 @@ const checkin = async (req: NextApiRequest, res: NextApiResponse) => {
 
     switch (method) {
         case "POST":
-            const result = await fetch("https://checkin.runsystem.info/attendance/submit", {
+            const result = await fetch("https://checkin.runsystem.work/attendance/submit", {
                 method: "POST",
                 redirect: "manual",
                 headers: {
