@@ -5,6 +5,15 @@ module.exports = {
         apiTimeout: process.env.API_TIMEOUT,
         debugLog: process.env.DEBUG_LOG,
     },
+    async redirects() {
+        return [
+            {
+                source: "/logout/idp",
+                destination: "/deeplink",
+                permanent: true,
+            },
+        ];
+    },
     // async headers() {
     //     return [
     //         {
