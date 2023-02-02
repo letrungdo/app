@@ -9,8 +9,8 @@
         "url": "https://github.com/letrungdo/app.git"
     },
     "scripts": {
-        "dev": "next dev -p 8080",
-        "build": "next build",
+        "dev": "NEXT_PUBLIC_GIT_SHA=`git rev-parse --short HEAD` next dev -p 8080",
+        "build": "NEXT_PUBLIC_GIT_SHA=`git rev-parse --short HEAD` next build",
         "postbuild": "next-sitemap",
         "start": "next start",
         "lint": "tsc --project tsconfig.json --noEmit && eslint '**/*.{ts,tsx}' --quiet --fix",

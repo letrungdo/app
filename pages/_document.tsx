@@ -2,7 +2,6 @@ import config from "config/site";
 import theme from "config/theme";
 import { GA_TRACKING_ID } from "lib/gtag";
 import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
-import React from "react";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -14,6 +13,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
+                    <meta name="ui-version" content={process.env.NEXT_PUBLIC_GIT_SHA} />
                     {/* PWA primary color */}
                     <meta name="theme-color" content={theme.palette.primary.main} />
                     <meta name="description" content={config.siteDescription} />
