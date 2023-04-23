@@ -22,6 +22,7 @@ module.exports = {
                 "logic",
                 "cr",
                 "add",
+                "wip",
             ],
         ],
     },
