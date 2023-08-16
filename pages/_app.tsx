@@ -11,6 +11,7 @@ import OneSignal from "react-onesignal";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { setToast } from "redux/appSlice";
 import store, { RootState } from "redux/store";
+import { envConfig } from "services/envConfig";
 
 function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -20,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             jssStyles.parentElement?.removeChild(jssStyles);
         }
         OneSignal.init({
-            appId: "d790617f-3ae7-4fa0-b27d-2409909ab696",
+            appId: envConfig.oneSignalAppId,
         });
     }, []);
 

@@ -1,10 +1,10 @@
 import axios from "axios";
 import { AXIOS_TIMEOUT_ERROR_MESSAGE } from "constants/api";
-import { EnvConfig } from "services/envConfig";
+import { envConfig } from "services/envConfig";
 
 const baseAxios = axios.create({
-    baseURL: EnvConfig.apiUrl,
-    timeout: EnvConfig.apiTimeout,
+    baseURL: envConfig.apiUrl,
+    timeout: envConfig.apiTimeout,
     timeoutErrorMessage: AXIOS_TIMEOUT_ERROR_MESSAGE,
 });
 

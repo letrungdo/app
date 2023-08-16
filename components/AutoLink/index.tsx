@@ -12,9 +12,9 @@ type Props = {
 const AutoLink = ({ sx, href, children }: Props) => (
     <>
         {isInteralLink(href) ? (
-            <NextLink href={href}>
-                <Link sx={sx}>{children}</Link>
-            </NextLink>
+            <Link component={NextLink} sx={sx} href={href}>
+                {children}
+            </Link>
         ) : (
             <Link href={href} sx={sx} target="_blank" rel="noopener noreferrer">
                 {children}

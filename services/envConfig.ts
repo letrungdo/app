@@ -6,6 +6,7 @@ export interface EnvConfig {
     apiUrl: string;
     apiTimeout: number;
     debugLog: string;
+    oneSignalAppId: string;
 }
 
-export const EnvConfig = publicRuntimeConfig as EnvConfig;
+export const envConfig = publicRuntimeConfig as EnvConfig;

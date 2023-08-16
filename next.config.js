@@ -4,6 +4,7 @@ module.exports = {
         apiUrl: process.env.API_URL,
         apiTimeout: process.env.API_TIMEOUT,
         debugLog: process.env.DEBUG_LOG,
+        oneSignalAppId: process.env.ONE_SIGNAL_APP_ID,
     },
     async redirects() {
         return [
