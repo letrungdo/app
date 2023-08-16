@@ -3,7 +3,6 @@ const config = {
     siteTitle: "Le Trung Do App",
     siteTitleShort: "DOLT App", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
     siteTitleAlt: "Le Trung Do App", // Alternative site title for SEO.
-    siteUrl: "https://app.letrungdo.com", // Domain of your website without pathPrefix.
     pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
     siteDescription: "App for Developer", // Website description used for RSS feeds/meta description tag.
     siteRss: "/rss.xml", // Path to the RSS file.
@@ -17,7 +16,7 @@ const config = {
     sidebarLinks: [
         {
             label: "CV",
-            url: "https://cv.letrungdo.com",
+            url: "https://cv.xn--t-lia.vn",
         },
         {
             label: "Blog",
@@ -93,7 +92,7 @@ const config = {
         { label: "Contact", url: "/contact" },
         { label: "Terms of Use", url: "/terms" },
         { label: "Privacy Policy", url: "/privacy" },
-        { label: "Sitemap", url: "https://app.letrungdo.com/sitemap.xml" },
+        { label: "Sitemap", url: `${process.env.PUBLIC_URL}/sitemap.xml` },
     ],
     copyright: "Copyright © 2022 Le Trung Do. Unless otherwise noted, all code MIT license.",
 };
@@ -107,9 +106,6 @@ if (config.pathPrefix === "/" || config.pathPrefix === "") {
     // Make sure pathPrefix only contains the first forward slash
     config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, "")}`;
 }
-
-// Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === "/") config.siteUrl = config.siteUrl.slice(0, -1);
 
 // Make sure siteRss has a starting forward slash
 if (config.siteRss && config.siteRss[0] !== "/") config.siteRss = `/${config.siteRss}`;
